@@ -1,0 +1,30 @@
+
+<div class="bg">
+<input id="startD" type='date'>
+<input id="endD" type='date'>
+<button type="button" (click)="filterByDate()"> Filter By StartDate </button>
+<button type="button" (click)="reset()"> reset </button>
+
+  <table>
+    <thead>
+      <th [appSort]="items" data-order="desc" data-name="id" scope="col">Id</th>
+      <th [appSort]="items" data-order="desc" data-name="city" scope="col">City</th>
+      <th [appSort]="items" data-order="desc" data-name="start_date" scope="col" data-type="date"> StartDate</th>
+      <th [appSort]="items" data-order="desc" data-name="end_date" scope="col" data-type="date">EndDate</th>
+      <th [appSort]="items" data-order="desc" data-name="price" scope="col">Price</th>
+      <th [appSort]="items" data-order="desc" data-name="status" scope="col">Status</th>
+      <th [appSort]="items" data-order="desc" data-name="Color" scope="col">Color</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of items">
+        <td>{{i.id}}</td>
+        <td>{{i.city}}</td>
+        <td>{{i.start_date}}</td>
+        <td>{{i.end_date}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.status}}</td>
+        <td>{{i.color}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
